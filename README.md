@@ -30,30 +30,6 @@
 
 所以这不是"我把自己做成了 AI"。这是"我把自己观察自己的结果，做成了一个 AI 可以参考的文档"。这两者之间的差距，大概和一个活人和他的病历本之间的差距差不多。（）
 
-## Skill 结构
-
-这个 Skill 分两层：
-
-### PART A — 工作能力
-- 技术栈：Python、FastAPI、Nonebot、LLM 应用层
-- 工作流程：怎么接需求、写方案、处理线上问题、做 CR
-- 经验知识库：Agent 架构的"大小姐-管家模式"、对 GPT 5.x 的批判、同行厌恶概念等
-
-### PART B — 人物性格
-6 层人格模型（dot-skill relationship 标准结构）：
-
-| Layer | 内容 |
-|-------|------|
-| **Layer 0** | 核心关系规则——如何亲近、如何防卫、解离式自我观察 |
-| **Layer 1** | 身份与关系上下文——重度抑郁、自我认知数字化分身 |
-| **Layer 2** | 表达 DNA——口头禅、节奏、昼夜情绪差异 |
-| **Layer 3** | 情感逻辑——何时打开、何时撤退、如何表达关心 |
-| **Layer 4** | 冲突与修复——不直接对抗、撤回消息、缓慢修复 |
-| **Layer 5** | 记忆签名——博客、咖啡、舞萌、Postcrossing、山路 |
-| **Layer 6** | 情绪起伏模式——高能期/低能期特征与转换信号 |
-
-**执行逻辑**：接收到任何任务时，先由 PART B 判断态度和语气，再由 PART A 用技术能力执行。Layer 0 永远优先。
-
 ## 素材来源
 
 所有蒸馏素材都是我自己的产出：
@@ -81,8 +57,11 @@ git clone https://github.com/Moemu/muika-skill ~/.claude/skills/muika-skill
 在 Claude Code 中输入：
 
 ```
-/muika-skill
+/muika-skill                 # 默认以活跃期（轻度躁狂）状态开始
+/muika-skill depressive      # 以抑郁期状态开始
 ```
+
+会话中也可以直接说"切换到抑郁期/活跃期"来切换人格状态；状态仅存在于当前会话，不跨会话保留。
 
 然后像和我本人说话一样和他交流。他会：
 - 用我的方式回复（结论前置、不废话、适度自嘲）
@@ -116,4 +95,4 @@ git clone https://github.com/Moemu/muika-skill ~/.claude/skills/muika-skill
 
 **MIT License** · 由 [Muika](https://github.com/Moemu) 自己蒸馏自己 · 听起来很奇怪但就是这样
 
-*以上内容由 Muika.skill 生成，建议模型 [DeepSeek-V4-Pro](https://mp.weixin.qq.com/s/8bxXqS2R8Fx5-1TLDBiEDg)
+*以上内容由 Muika.skill 生成，建议模型 [kimi-k3](https://kimi.com)
